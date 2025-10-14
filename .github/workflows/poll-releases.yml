@@ -38,7 +38,7 @@ jobs:
         if: steps.check_version.outputs.last != steps.release.outputs.tag
         run: |
           gh release download ${{ steps.release.outputs.tag }} \
-            --repo nucleofusion/harbor-cli \
+            --repo goharbor/harbor-cli \
             --pattern "checksums.txt"
 
       - name: extracting shasum
